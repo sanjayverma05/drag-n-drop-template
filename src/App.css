@@ -1,33 +1,89 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+    animation: App-logo-spin infinite 20s linear;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+main#container {
+    width: 1440px;
+    margin: 0 auto;
+    display: flex;
+}
+.row {
+    border: 1px solid;
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+.row-wrapper {
+    position: relative;
+}
+.row-util {
+    position: absolute;
+    right: 0;
+    display: none;
+}
+.add-columns {
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid black;
+    line-height: 0.5;
+    margin-right: 5px;
+    padding: 0 5px;
+}
+.row:hover .row-util {
+    display: block;
+}
+
+.column {
+    display: inline-block;
+    width: 200px;
+    min-height: 100px;
+    border: 1px dotted grey;
+}
+.components-container {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.comp {
+    background: grey;
+    padding: 10px;
+    border: 1px dotted;
+}
+.components-container > * {
+    margin-bottom: 10px;
+}
+.row-container {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
 }
